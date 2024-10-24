@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+$Blue: hsl(246, 80%, 60%);
+$Light_red: hsl(15, 100%, 70%);
+$Soft_blue: hsl(195, 74%, 62%);
+$Light_red2: hsl(348, 100%, 68%);
+$Lime_green: hsl(145, 58%, 55%);
+$Violet: hsl(264, 64%, 52%);
+$Soft_orange: hsl(43, 84%, 65%);
+$Very_dark_blue: hsl(226, 43%, 10%);
+$Dark_blue: hsl(235, 46%, 20%);
+$Desaturated_blue: hsl(235, 45%, 61%);
+$Pale_Blue: hsl(236, 100%, 87%);
+
+*{
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $Very_dark_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 100vh;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    'person-name work play Study'
+    'person-name Exercise Social Self-care';
+    width: 85%;
+    height: 85%;
+    gap: 2rem;
+
+    .card{
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            float: right;
+            margin-right: 1rem;
+            margin-top: -.5rem;
+        }
+
+        .sub-card{
+            background-color: $Dark_blue;
+            border-radius: 1rem;
+            height: 200px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            padding: 1.5rem;
+
+            div:nth-child(1){
+                display: flex;
+                justify-content: space-between;
+                
+                .title{
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                .ellipsis{
+
+                    &:hover{
+                        fill: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .current{
+                color: white;
+                font-weight: 300;
+                font-size: 3.5rem;
+            }
+
+            .previous{
+                color: $Pale_Blue;
+            }
+
+            &:hover{
+                background-color: hsl(237, 36%, 44%);
+            }
+        }
+    }
+
+    .person-name{
+        grid-area: person-name;
+        background-color: $Dark_blue;
+        border-radius: 1rem;
+
+        div:nth-child(1){
+            background-color: $Blue;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            height: 60%;
+
+            img{
+                width: 80px;
+                border: 3px solid white;
+                border-radius: 50%;
+                margin-bottom: 2rem;
+            }
+
+            h4{
+                color: $Pale_Blue;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            h1{
+                margin: 0;
+                color: white;
+                font-weight: 300;
+                font-size: 2.8rem;
+                line-height: 3.2rem;
+            }
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.5rem;
+            gap: 1.2rem;
+
+            li{
+
+                button{
+                    background-color: $Dark_blue;
+                    color: $Desaturated_blue;
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                    border: none;
+
+                    &:hover{
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                button.active{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .Work{
+        grid-area: work;
+        background-color: $Light_red;
+    }
+
+    .Play{
+        grid-area: play;
+        background-color: $Soft_blue;
+    }
+
+    .Study{
+        grid-area: Study;
+        background-color: $Light_red2;
+    }
+
+    .Exercise{
+        grid-area: Exercise;
+        background-color: $Lime_green;
+    }
+
+    .Social{
+        grid-area: Social;
+        background-color: $Violet;
+    }
+
+    .Self-Care{
+        grid-area: Self-care;
+        background-color: $Soft_orange;
+    }
+}
+
+@media (max-width: 1024px){
+    .container{
+        width: 95%;
+        .card{
+            .sub-card{
+                height: 170px;
+
+                .current{
+                    font-size: 2.8rem;
+                }
+            }
+        }
+
+        .person-name{
+         
+            div:nth-child(1){
+    
+                h1{
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }   
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 100%;
+        gap: 1rem;
+
+        .card{
+            .sub-card{
+                div:nth-child(1){
+                    .title{
+                        font-size: 16px;
+                    }
+                }
+
+                .current{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .person-name{
+         
+            div:nth-child(1){
+    
+                h1{
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+            }
+
+            ul{
+                padding-left: 1rem;
+            }
+        }
+    }   
+}
+
+@media (max-width: 425px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+        'person-name'
+        'work'
+        'play'
+        'Study'
+        'Exercise'
+        'Social'
+        'Self-care';
+        height: 100%;
+        width: 95%;
+
+        .card{
+            height: 170px;
+
+            .sub-card{
+                height: 140px;
+
+                div:nth-child(2){
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+        
+        .person-name{
+
+            div:nth-child(1){
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                height: 150px;
+
+                div{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                }
+
+                img{
+                    height: 80px;
+                    margin-bottom: 0;
+                }
+            }
+
+            ul{
+                flex-direction: row;
+                justify-content: space-around;
+                padding: 0 1rem;
+            }
+        }
+    }
+}

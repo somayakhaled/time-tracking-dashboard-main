@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="person-name">
+      <div>
+        <img src="images/image-jeremy.png" alt="">
+        <div>
+          <h4>Report for</h4>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+      
+      <ul>
+        <li>
+          <button id="Daily">Daily</button>
+        </li>
+        <li>
+          <button id="Weekly">Weekly</button>
+        </li>
+        <li>
+          <button id="Monthly">Monthly</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card Work">
+      <img src="images/icon-work.svg" alt="">
+      <div class="sub-card">
+        <div>
+          <div class="title">Work</div>
+          <div>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        
+        <div>
+          <div class="current"></div>
+          <div class="previous"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card Play">
+      <img src="images/icon-play.svg" alt="">
+      <div class="sub-card">
+        <div>
+          <div class="title">Play</div>
+          <div>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        
+        <div>
+          <div class="current"></div>
+          <div class="previous"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card Study">
+      <img src="images/icon-study.svg" alt="">
+      <div class="sub-card">
+        <div>
+          <div class="title">Study</div>
+          <div>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        
+        <div>
+          <div class="current"></div>
+          <div class="previous"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card Exercise">
+      <img src="images/icon-exercise.svg" alt="">
+      <div class="sub-card">
+        <div>
+          <div class="title">Exercise</div>
+          <div>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        
+        <div>
+          <div class="current"></div>
+          <div class="previous"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card Social">
+      <img src="images/icon-social.svg" alt="">
+      <div class="sub-card">
+        <div>
+          <div class="title">Social</div>
+          <div>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        
+        <div>
+          <div class="current"></div>
+          <div class="previous"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card Self-Care">
+      <img src="images/icon-self-care.svg" alt="">
+      <div class="sub-card">
+        <div>
+          <div class="title">Self Care</div>
+          <div>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path class="ellipsis" d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+        
+        <div>
+          <div class="current"></div>
+          <div class="previous"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
